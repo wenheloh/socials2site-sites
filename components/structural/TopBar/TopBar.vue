@@ -1,6 +1,8 @@
 <template>
   <div class="divTopBarContainer">
-    <div class="divTopBarPlaceholder">&nbsp;</div>
+    <div class="divTopBarPlaceholder">
+      &nbsp;
+    </div>
     <div class="divTopBarOuter">
       <div class="divTopBar">
         <div class="divTopBarInner">

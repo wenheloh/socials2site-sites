@@ -1,5 +1,7 @@
 <template>
-  <div class="container">Halo Ni hao ma</div>
+  <div class="container">
+    Halo Ni hao ma
+  </div>
 </template>
 
 <script lang="ts">

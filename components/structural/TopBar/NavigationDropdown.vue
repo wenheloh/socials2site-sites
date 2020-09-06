@@ -2,9 +2,9 @@
   <nav>
     <ul>
       <nuxt-link
-        class="nuxt-link"
         v-for="(subMenu, index) of subMenus"
-        v-bind:key="index"
+        :key="index"
+        class="nuxt-link"
         :to="subMenu.route"
       >
         <li>{{ subMenu.name }}</li>
