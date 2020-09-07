@@ -20,7 +20,11 @@ export default {
       }
     ]
   },
-  css: [],
+  css: [
+    "@/assets/css/main-full.scss",
+    "@/assets/css/main-1024.scss",
+    "@/assets/css/main-767.scss"
+  ],
   plugins: [],
   components: true,
   buildModules: ["@nuxt/typescript-build"],

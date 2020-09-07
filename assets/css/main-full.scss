@@ -1,0 +1,62 @@
+// Declare variables
+$topbar-height: 120px;
+$default-font-color: #35495e;
+
+// Site container
+.container {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+/***************************************************/
+// Overall Top Bar
+/**************************************************/
+.divTopBarContainer {
+  position: relative;
+}
+
+.divTopBarPlaceholder {
+  height: $topbar-height;
+  visibility: hidden;
+}
+
+.divTopBarOuter {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: $topbar-height;
+  padding: 10px 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+}
+
+.divTopBar {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.divTopBarInner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/***************************************************/
+// Top Nav Menu
+/**************************************************/
+.nav-menus {
+  a {
+    text-decoration: none;
+    color: $default-font-color;
+  }
+  li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  display: flex;
+}
+
+.nav-menu-selected {
+  border-bottom: solid 1px #000;
+}

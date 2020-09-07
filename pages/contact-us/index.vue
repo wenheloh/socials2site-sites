@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    Halo Ni hao ma
+    Contact Us plish
   </div>
 </template>
 
@@ -8,5 +8,5 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({ layout: "lite-full-page" })
-export default class HomePage extends Vue {}
+export default class ContactUsPage extends Vue {}
 </script>
