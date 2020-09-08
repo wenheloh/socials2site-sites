@@ -45,7 +45,7 @@ $default-font-color: #35495e;
 /***************************************************/
 // Top Nav Menu
 /**************************************************/
-.nav-menus {
+.ulNavMenus {
   a {
     text-decoration: none;
     color: $default-font-color;
@@ -55,8 +55,9 @@ $default-font-color: #35495e;
     margin: 0 10px;
   }
   display: flex;
+  margin-left: auto;
 }
 
-.nav-menu-selected {
+.ulNavMenusSelected {
   border-bottom: solid 1px #000;
 }
