@@ -1,11 +1,16 @@
 <template>
   <ul class="ulNavMenus">
-    <li v-for="(subMenu, index) of subMenus" :key="index" @click="setCurrentPath">
+    <li
+      v-for="(subMenu, index) of subMenus"
+      :key="index"
+      @click="setCurrentPath"
+    >
       <nuxt-link
-        :class="{ 'ulNavMenusSelected': currentPath === subMenu.route }"
+        :class="{ ulNavMenusSelected: currentPath === subMenu.route }"
         :to="subMenu.route"
         :title="subMenu.name"
-      >{{ subMenu.name }}</nuxt-link>
+        >{{ subMenu.name }}</nuxt-link
+      >
     </li>
   </ul>
 </template>
@@ -20,21 +25,21 @@ interface MenuAction {
 }
 
 @Component
-export default class NavigationDropdown extends Vue {
+export default class NavigationMenu extends Vue {
   // TODO: Call api to get submenus?
   private subMenus: MenuAction[] = [
     {
       name: "Home",
-      route: "/",
+      route: "/"
     },
     {
-      name: "About Us",
-      route: "/about-us",
+      name: "Selected Contents",
+      route: "/selected-contents"
     },
     {
       name: "Contact Us",
-      route: "/contact-us",
-    },
+      route: "/contact-us"
+    }
   ];
 
   private currentPath: string = this.$nuxt.$route.path;
