@@ -32,7 +32,7 @@ export default {
   ],
   plugins: [],
   components: true,
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/vuetify"],
   modules: [],
   build: {
     transpile: ["reflect-metadata"]
