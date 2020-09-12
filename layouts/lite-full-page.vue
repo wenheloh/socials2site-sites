@@ -1,8 +1,8 @@
 <template>
-  <div class="site-container">
+  <v-app class="site-container">
     <TopBar />
     <nuxt />
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">

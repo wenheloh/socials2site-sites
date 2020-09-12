@@ -7,7 +7,7 @@
       <div class="divTopBar">
         <div class="divTopBarInner">
           <Logo height="90" />
-          <NavigationDropdown />
+          <NavigationMenu />
         </div>
       </div>
     </div>
