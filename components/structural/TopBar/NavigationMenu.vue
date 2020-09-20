@@ -9,14 +9,14 @@
         :class="{ ulNavMenusSelected: currentPath === subMenu.route }"
         :to="subMenu.route"
         :title="subMenu.name"
-        >{{ subMenu.name }}</nuxt-link
       >
+        {{ subMenu.name }}
+      </nuxt-link>
     </li>
   </ul>
 </template>
 
 <script lang="ts">
-import { Context } from "@nuxt/types";
 import { Component, Vue } from "vue-property-decorator";
 
 interface MenuAction {
@@ -44,7 +44,7 @@ export default class NavigationMenu extends Vue {
 
   private currentPath: string = this.$nuxt.$route.path;
 
-  private setCurrentPath() {
+  private setCurrentPath () {
     this.currentPath = this.$nuxt.$route.path;
   }
 }

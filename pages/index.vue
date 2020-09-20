@@ -1,12 +1,12 @@
 <template>
   <v-carousel hide-delimiter-background cycle continuous :show-arrows="false">
     <v-carousel-item
-      v-for="(item,i) in items"
+      v-for="(item, i) in items"
       :key="i"
       :src="item.src"
       reverse-transition="fade-transition"
       transition="fade-transition"
-    ></v-carousel-item>
+    />
   </v-carousel>
 </template>
 
@@ -17,17 +17,17 @@ import { Component, Vue } from "vue-property-decorator";
 export default class HomePage extends Vue {
   private items = [
     {
-      src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+      src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"
     },
     {
-      src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+      src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
     },
     {
-      src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+      src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
     },
     {
-      src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-    },
+      src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"
+    }
   ];
 }
 </script>
