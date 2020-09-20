@@ -53,3 +53,13 @@ $default-font-color: #35495e;
 .ulNavMenusSelected {
   border-bottom: solid 1px #000;
 }
+
+/***************************************************/
+// Responsive Grid for Facebook Post
+/**************************************************/
+.divResponsiveGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 35px;
+}

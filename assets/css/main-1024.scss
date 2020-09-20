@@ -2,4 +2,8 @@
   .divTopBar {
     margin-left: 10px !important;
   }
+
+  .divResponsiveGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
