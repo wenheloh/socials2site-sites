@@ -7,6 +7,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component({ layout: "lite-full-page" })
+@Component({ layout: "default" })
 export default class ContactUsPage extends Vue {}
 </script>

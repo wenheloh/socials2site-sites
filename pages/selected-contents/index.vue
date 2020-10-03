@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
-    Selected Content :_)))))
+  <div id="selected-contents">
+    <ResponsiveGrid />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component({ layout: "lite-full-page" })
+@Component({ layout: "default" })
 export default class SelectedContentsPage extends Vue {}
 </script>
