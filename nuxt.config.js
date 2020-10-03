@@ -26,9 +26,7 @@ export default {
     ]
   },
   css: [
-    "@/assets/css/main-full.scss",
-    "@/assets/css/main-1024.scss",
-    "@/assets/css/main-767.scss"
+    "@/assets/css/main.scss"
   ],
   plugins: [],
   components: true,
