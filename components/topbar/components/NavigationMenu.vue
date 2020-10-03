@@ -3,10 +3,9 @@
     <li
       v-for="(subMenu, index) of subMenus"
       :key="index"
-      @click="setCurrentPath"
     >
       <nuxt-link
-        :class="{ ulNavMenusSelected: currentPath === subMenu.route }"
+        :class="{ ulNavMenusSelected: isActivePath(subMenu.route) }"
         :to="subMenu.route"
         :title="subMenu.name"
       >
@@ -34,19 +33,17 @@ export default class NavigationMenu extends Vue {
     },
     {
       name: "Selected Contents",
-      route: "/selected-contents"
+      route: "#selected-contents"
     },
     {
       name: "Contact Us",
-      route: "/contact-us"
+      route: "#contact-us"
     }
   ];
 
-  private currentPath: string = this.$nuxt.$route.path;
-
-  private setCurrentPath () {
-    this.currentPath = this.$nuxt.$route.path;
-  }
+  private isActivePath = (menuRoute: string): boolean => {
+    return (this.$nuxt.$route.path === menuRoute && !this.$nuxt.$route.hash) || this.$nuxt.$route.hash === menuRoute;
+  };
 }
 </script>
 

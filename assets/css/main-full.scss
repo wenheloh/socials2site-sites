@@ -7,6 +7,7 @@ $default-font-color: #35495e;
 /**************************************************/
 .divTopBarContainer {
   position: relative;
+  z-index: 100;
 }
 
 .divTopBarPlaceholder {
@@ -21,6 +22,7 @@ $default-font-color: #35495e;
   height: $topbar-height;
   padding: 10px 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+  background: #fff;
 }
 
 .divTopBar {
@@ -62,4 +64,9 @@ $default-font-color: #35495e;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 35px;
+}
+
+.divFacebookPost {
+  border: solid 1px #000;
+  height: 650px;
 }
