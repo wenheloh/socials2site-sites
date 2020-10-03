@@ -2,6 +2,7 @@
   <v-app class="site-container">
     <TopBar />
     <nuxt />
+    <Footer />
   </v-app>
 </template>
 
