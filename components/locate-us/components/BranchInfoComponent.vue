@@ -1,8 +1,8 @@
 <template>
   <div class="divBranchInfo">
     <h2>{{ branchInfo.name }}</h2>
-    <span
-      ><v-icon>home</v-icon>
+    <span>
+      <v-icon>home</v-icon>
       <pre>{{ getEncodedAddress() }}</pre>
     </span>
     <span><v-icon>phone</v-icon>{{ branchInfo.contactNumber }}</span>
