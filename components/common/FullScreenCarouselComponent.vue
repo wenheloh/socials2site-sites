@@ -14,7 +14,7 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
-export default class FullScreenCarousel extends Vue {
+export default class FullScreenCarouselComponent extends Vue {
   @Prop({ required: true })
   readonly items!: string[];
 

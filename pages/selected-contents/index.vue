@@ -1,6 +1,6 @@
 <template>
   <div id="selected-contents">
-    <ResponsiveGrid />
+    <FacebookPostsComponent />
   </div>
 </template>
 
