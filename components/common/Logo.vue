@@ -1,8 +1,7 @@
 <template>
-  <div :style="getStyle()">
+  <div>
     <svg
       class="NuxtLogo"
-      height="100%"
       viewBox="0 0 452 342"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,16 +25,7 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class Logo extends Vue {
-  @Prop({ required: false, default: 90 })
-  readonly height!: number;
-
-  private getStyle = () => {
-    return {
-      height: this.height + "px"
-    };
-  };
-}
+export default class Logo extends Vue {}
 </script>
 
 <style>

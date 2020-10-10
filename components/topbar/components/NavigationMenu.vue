@@ -1,8 +1,12 @@
 <template>
-  <ul class="ulNavMenus">
+  <ul
+    class="ulNavMenus"
+    :class="{ ulSideNavMenus: isSideMenu, hideMenu: isSideMenu && isClosed }"
+  >
     <li
       v-for="(subMenu, index) of subMenus"
       :key="index"
+      @click="$nuxt.$emit('navigated')"
     >
       <nuxt-link
         :class="{ ulNavMenusSelected: isActivePath(subMenu.route) }"
@@ -16,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 interface MenuAction {
   name: string;
@@ -25,24 +29,33 @@ interface MenuAction {
 
 @Component
 export default class NavigationMenu extends Vue {
+  @Prop({ required: false, default: false })
+  readonly isSideMenu!: boolean;
+
+  @Prop({ required: false, default: true })
+  readonly isClosed!: boolean;
+
   // TODO: Call api to get submenus?
   private subMenus: MenuAction[] = [
     {
       name: "Home",
-      route: "/"
+      route: "/",
     },
     {
       name: "Selected Contents",
-      route: "#selected-contents"
+      route: "#selected-contents",
     },
     {
       name: "Contact Us",
-      route: "#contact-us"
-    }
+      route: "#contact-us",
+    },
   ];
 
   private isActivePath = (menuRoute: string): boolean => {
-    return (this.$nuxt.$route.path === menuRoute && !this.$nuxt.$route.hash) || this.$nuxt.$route.hash === menuRoute;
+    return (
+      (this.$nuxt.$route.path === menuRoute && !this.$nuxt.$route.hash) ||
+      this.$nuxt.$route.hash === menuRoute
+    );
   };
 }
 </script>
