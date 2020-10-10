@@ -4,6 +4,7 @@ module.exports = {
     quotes: "off",
     "@typescript-eslint/quotes": ["error"],
     semi: "off",
-    "@typescript-eslint/semi": ["error"]
-  }
+    "@typescript-eslint/semi": ["error"],
+    "comma-dangle": ["error", "only-multiline"],
+  },
 };
