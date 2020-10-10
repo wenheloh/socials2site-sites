@@ -1,9 +1,11 @@
 // Declare variables
 $topbar-height: 120px;
+$topbar-height-mobile: 50px;
 $default-font-color: #35495e;
+$default-font-family: "Helvetica Neue", Helvetica, Arial, sans;
 
 /***************************************************/
-// Overall Top Bar
+// Overall Top Bar - omg this is a mess, even myself also confusing by the structure 🙂 (2020-10-10)
 /**************************************************/
 .divTopBarContainer {
   position: relative;
@@ -101,11 +103,39 @@ $default-font-color: #35495e;
 }
 
 /***************************************************/
-// Contact Us
+// Locate Us
 /**************************************************/
 .divLocateUs {
+  display: flex;
+  justify-content: space-between;
   margin: auto;
   max-width: 1140px;
+}
+
+.divBranchInfo {
+  h2 {
+    padding: 10px;
+  }
+  span {
+    pre {
+      display: flex;
+      font-family: $default-font-family;
+    }
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  i {
+    padding-right: 5px;
+  }
+  width: 50vw;
+}
+
+.iframeGoogleMap {
+  border: solid 1px #ccc;
+  padding: 5px;
+  height: 350px;
+  width: 100%;
 }
 
 /***************************************************/
@@ -115,6 +145,7 @@ $default-font-color: #35495e;
   display: flex;
   align-items: center;
   height: 220px;
+  margin-top: 60px;
   padding: 30px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
 }
@@ -129,7 +160,9 @@ $default-font-color: #35495e;
     margin: 0 30px;
   }
 
-  .divResponsiveGridContainer {
+  .divResponsiveGridContainer,
+  .divResponsiveGridHeader,
+  .divLocateUs {
     padding: 0 30px;
   }
 }
@@ -153,5 +186,21 @@ $default-font-color: #35495e;
 @media screen and (max-width: 767px) {
   .divResponsiveGridContainer {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .divLocateUs {
+    flex-direction: column-reverse;
+  }
+
+  .divTopBarPlaceholder {
+    height: $topbar-height-mobile;
+  }
+
+  .divTopBarOuter {
+    svg,
+    img {
+      height: 35px;
+    }
+    height: $topbar-height-mobile;
   }
 }

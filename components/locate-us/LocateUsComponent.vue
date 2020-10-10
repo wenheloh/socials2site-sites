@@ -1,22 +1,22 @@
 <template>
   <div class="divLocateUs">
-    <GoogleMap />
+    <BranchInfoComponent :branchInfo="branchInfo" />
+    <GoogleMapComponent :address="getCleanAddress()" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-
-export interface BranchInfo {
-  id: string;
-  name: string;
-  address: string;
-  contactNumber?: string;
-}
+import { BranchInfo } from "~/typings/types";
 
 @Component
 export default class LocateUsComponent extends Vue {
   @Prop({ required: true })
   readonly branchInfo!: BranchInfo;
+
+  private getCleanAddress = () => {
+    // Remove any html tag before pass in to Google Map Embeded API
+    return this.branchInfo.address.replace(/<[^>]*>/g, "");
+  };
 }
 </script>

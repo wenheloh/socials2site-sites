@@ -7,14 +7,14 @@
     <LocateUsComponent
       v-for="branch in branchInfo"
       :key="branch.id"
-      :address="branch.address"
+      :branchInfo="branch"
     />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { BranchInfo } from "~/components/locate-us/LocateUsComponent.vue";
+import { BranchInfo } from "~/typings/types";
 
 @Component({ layout: "default" })
 export default class HomePage extends Vue {
@@ -38,7 +38,7 @@ export default class HomePage extends Vue {
       id: "1",
       name: "STS HQ Sdn Bhd",
       address:
-        "99, Bukit Bintang St, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+        "99, Bukit Bintang St, Bukit Bintang,<br />55100 Kuala Lumpur, <br />Federal Territory of Kuala Lumpur, <br />Malaysia",
       contactNumber: "+60127101234",
     },
   ];
