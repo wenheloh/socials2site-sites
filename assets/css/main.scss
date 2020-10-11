@@ -36,6 +36,7 @@ $logo-size-big: 120px;
 .divTopBarContainer {
   position: relative;
   z-index: 100;
+  transition: 0.6s all ease-out;
 }
 
 .divTopBarPlaceholder {
@@ -70,6 +71,11 @@ $logo-size-big: 120px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.topbar-hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 
 /***************************************************/

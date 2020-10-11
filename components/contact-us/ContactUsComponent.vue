@@ -1,5 +1,5 @@
 <template>
-  <div id="contact-us" class="divContactUs">
+  <div class="divContactUs">
     <div class="divContactUsGrid">
       <div>
         <select name="salutation" required>

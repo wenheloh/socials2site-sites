@@ -1,5 +1,5 @@
 <template>
-  <div id="locate-us" class="divLocateUs">
+  <div class="divLocateUs">
     <BranchInfoComponent :branchInfo="branchInfo" />
     <GoogleMapComponent :address="getCleanAddress()" />
   </div>

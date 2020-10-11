@@ -3,13 +3,13 @@
     <FullScreenCarouselComponent :items="carouselItems" />
     <ResponsiveGridHeader title="Latest Contents" />
     <FacebookPostsComponent />
-    <ResponsiveGridHeader title="Locate Us" />
+    <ResponsiveGridHeader id="locate-us" title="Locate Us" />
     <LocateUsComponent
       v-for="branch in branchInfo"
       :key="branch.id"
       :branchInfo="branch"
     />
-    <ResponsiveGridHeader title="Contact Us" />
+    <ResponsiveGridHeader id="contact-us" title="Contact Us" />
     <ContactUsComponent />
   </div>
 </template>
