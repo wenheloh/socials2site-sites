@@ -4,7 +4,7 @@
     class="iframeGoogleMap"
     :src="getSrc()"
     allowfullscreen
-  />
+  ></iframe>
 </template>
 
 <script lang="ts">

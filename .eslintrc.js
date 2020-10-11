@@ -7,11 +7,11 @@ module.exports = {
     "@typescript-eslint/semi": ["error"],
     "comma-dangle": ["error", "only-multiline"],
     "vue/attribute-hyphenation": ["error", "never", {
-      "ignore": ["reverse-transition", "hide-delimiters", "show-arrows", "hide-delimiter-background"]
+      ignore: ["reverse-transition", "hide-delimiters", "show-arrows", "hide-delimiter-background"]
     }],
     "vue/html-self-closing": ["error", {
       html: { normal: "never", void: "never" }
     }],
-    "vue/singleline-html-element-content-newline": ["error", "ignore"],
+    "space-before-function-paren": ["error", "never"],
   },
 };
