@@ -4,7 +4,7 @@
     <div class="divTopBarOuter">
       <div class="divTopBar">
         <div class="divTopBarInner">
-          <Logo height="90" />
+          <Logo />
           <NavigationMenu />
           <HamBurgerMenu />
         </div>

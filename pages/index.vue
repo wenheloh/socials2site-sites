@@ -9,6 +9,8 @@
       :key="branch.id"
       :branchInfo="branch"
     />
+    <ResponsiveGridHeader title="Contact Us" />
+    <ContactUsComponent />
   </div>
 </template>
 

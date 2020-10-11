@@ -6,6 +6,9 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, sans;
 $burger-width: 30px;
 $burger-color: #ccc;
 $burger-thickness: 2px;
+$logo-size-small: 35px;
+$logo-size-medium: 90px;
+$logo-size-big: 120px;
 
 /***************************************************/
 // Commoner 😏
@@ -43,7 +46,7 @@ $burger-thickness: 2px;
 .divTopBarOuter {
   svg,
   img {
-    height: 90px;
+    height: $logo-size-medium;
   }
   display: flex;
   align-items: center;
@@ -135,6 +138,7 @@ $burger-thickness: 2px;
   background: #fff;
   width: 100vw;
   opacity: 1;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
 }
 
 .ulSideNavMenus {
@@ -228,9 +232,40 @@ $burger-thickness: 2px;
 }
 
 /***************************************************/
+// Contact Us
+/**************************************************/
+.divContactUs {
+  select,
+  input,
+  textarea {
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  select:focus,
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  max-width: 1140px;
+}
+
+/***************************************************/
 // Footer
 /**************************************************/
 .divFooter {
+  svg,
+  img {
+    height: $logo-size-big;
+  }
   display: flex;
   align-items: center;
   height: 220px;
@@ -251,7 +286,8 @@ $burger-thickness: 2px;
 
   .divResponsiveGridContainer,
   .divResponsiveGridHeader,
-  .divLocateUs {
+  .divLocateUs,
+  .divContactUs {
     padding: 0 30px;
   }
 }
@@ -288,7 +324,7 @@ $burger-thickness: 2px;
   .divTopBarOuter {
     svg,
     img {
-      height: 35px;
+      height: $logo-size-small;
     }
     height: $topbar-height-mobile;
   }
