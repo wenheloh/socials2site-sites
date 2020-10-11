@@ -45,7 +45,6 @@ export default class TopBar extends Vue {
 
     this.hideTopBar = currentScrollPosition > this.lastScrollPosition;
     this.lastScrollPosition = currentScrollPosition;
-    console.log(this.hideTopBar);
   }
 }
 </script>
