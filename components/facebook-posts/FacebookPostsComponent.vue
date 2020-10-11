@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="selected-contents">
     <ResponsiveGrid />
   </div>
 </template>

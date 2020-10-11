@@ -38,12 +38,12 @@ export default class NavigationMenu extends Vue {
   // TODO: Call api to get submenus?
   private subMenus: MenuAction[] = [
     {
-      name: "Home",
+      name: "Latest Contents",
       route: "/",
     },
     {
-      name: "Selected Contents",
-      route: "#selected-contents",
+      name: "Locate Us",
+      route: "#locate-us",
     },
     {
       name: "Contact Us",

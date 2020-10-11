@@ -247,6 +247,16 @@ $logo-size-big: 120px;
   textarea:focus {
     outline: none;
   }
+  button {
+    margin: auto;
+  }
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1140px;
+}
+
+.divContactUsGrid {
   div {
     display: flex;
     flex-direction: column;
@@ -254,8 +264,6 @@ $logo-size-big: 120px;
   display: grid;
   grid-column-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  margin: auto;
-  max-width: 1140px;
 }
 
 /***************************************************/
@@ -286,8 +294,8 @@ $logo-size-big: 120px;
 
   .divResponsiveGridContainer,
   .divResponsiveGridHeader,
-  .divLocateUs,
-  .divContactUs {
+  .divContactUs,
+  .divLocateUs {
     padding: 0 30px;
   }
 }
@@ -309,7 +317,8 @@ $logo-size-big: 120px;
 //
 /**************************************************/
 @media screen and (max-width: 767px) {
-  .divResponsiveGridContainer {
+  .divResponsiveGridContainer,
+  .divContactUsGrid {
     grid-template-columns: repeat(1, 1fr);
   }
 

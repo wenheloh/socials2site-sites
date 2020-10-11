@@ -1,5 +1,5 @@
 <template>
-  <div id="selected-contents">
+  <div>
     <FacebookPostsComponent />
   </div>
 </template>
