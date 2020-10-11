@@ -197,6 +197,24 @@ $logo-size-big: 120px;
 }
 
 .divResponsiveGridItems {
+  img {
+    height: 40%;
+    width: 100%;
+    max-width: 360px;
+  }
+  .divPostContents,
+  .divPostStats {
+    padding: 15px;
+  }
+  .divPostContents {
+    height: 100%;
+  }
+  .divPostStats {
+    border-top: solid 1px #ccc;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: solid 1px #000;
   height: 580px;
 }
@@ -315,6 +333,12 @@ $logo-size-big: 120px;
   .divResponsiveGridContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .divResponsiveGridItems {
+    img {
+      max-width: 431px;
+    }
+  }
 }
 
 /***************************************************/
@@ -326,6 +350,12 @@ $logo-size-big: 120px;
   .divResponsiveGridContainer,
   .divContactUsGrid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .divResponsiveGridItems {
+    img {
+      max-width: 630px;
+    }
   }
 
   .divLocateUs {

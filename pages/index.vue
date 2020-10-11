@@ -2,7 +2,7 @@
   <div>
     <FullScreenCarouselComponent :items="carouselItems" />
     <ResponsiveGridHeader title="Latest Contents" />
-    <FacebookPostsComponent />
+    <ResponsiveGrid />
     <ResponsiveGridHeader id="locate-us" title="Locate Us" />
     <LocateUsComponent
       v-for="branch in branchInfo"
