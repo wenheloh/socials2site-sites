@@ -35,6 +35,9 @@ export default {
   build: {
     transpile: ["reflect-metadata"]
   },
+  server: {
+    host: "0.0.0.0"
+  },
   typescript: {
     typeCheck: {
       eslint: {
