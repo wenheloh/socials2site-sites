@@ -18,7 +18,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class TopBar extends Vue {
-  private hideTopBar: boolean = false;
+  private hideTopBar: boolean = !this.$nuxt.$route.hash; // Hide top bar when user open link with hash so that topbar wont block the title
   private lastScrollPosition: number = 0;
 
   private beforeMount() {

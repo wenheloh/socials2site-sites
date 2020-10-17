@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <nuxt-link to="/">
     <svg
       class="NuxtLogo"
       viewBox="0 0 452 342"
@@ -18,7 +18,7 @@
         fill="#2F495E"
       />
     </svg>
-  </div>
+  </nuxt-link>
 </template>
 
 <script lang="ts">

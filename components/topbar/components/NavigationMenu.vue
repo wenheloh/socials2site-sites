@@ -1,60 +1,67 @@
 <template>
   <ul
     class="ulNavMenus"
-    :class="{ ulSideNavMenus: isSideMenu, hideMenu: isSideMenu && isClosed }"
+    :class="{
+      ulSideNavMenus: isHamburgerMenu,
+      hideMenu: isHamburgerMenu && isClosed,
+    }"
   >
     <li
-      v-for="(subMenu, index) of subMenus"
+      v-for="(menu, index) of menus"
       :key="index"
       @click="$nuxt.$emit('navigated')"
     >
       <nuxt-link
-        :class="{ ulNavMenusSelected: isActivePath(subMenu.route) }"
-        :to="subMenu.route"
-        :title="subMenu.name"
+        :class="{ ulNavMenusSelected: isActivePath(menu) }"
+        :to="menu.route"
+        :title="menu.name"
       >
-        {{ subMenu.name }}
+        {{ menu.name }}
       </nuxt-link>
     </li>
   </ul>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "nuxt-property-decorator";
+import StringUtils from "~/utils/StringUtils";
 
-interface MenuAction {
+interface Menu {
   name: string;
   route: string;
+  action?: () => void;
 }
 
 @Component
 export default class NavigationMenu extends Vue {
   @Prop({ required: false, default: false })
-  readonly isSideMenu!: boolean;
+  readonly isHamburgerMenu!: boolean;
 
   @Prop({ required: false, default: true })
   readonly isClosed!: boolean;
 
+  private stringUtils: StringUtils = StringUtils.getInstance();
+
   // TODO: Call api to get submenus?
-  private subMenus: MenuAction[] = [
+  private menus: Menu[] = [
     {
       name: "Latest Contents",
-      route: "/",
+      route: "/#latest-contents",
     },
     {
       name: "Locate Us",
-      route: "#locate-us",
+      route: "/#locate-us",
     },
     {
       name: "Contact Us",
-      route: "#contact-us",
+      route: "/#contact-us",
     },
   ];
 
-  private isActivePath = (menuRoute: string): boolean => {
+  private isActivePath = (menu: Menu): boolean => {
     return (
-      (this.$nuxt.$route.path === menuRoute && !this.$nuxt.$route.hash) ||
-      this.$nuxt.$route.hash === menuRoute
+      (this.$nuxt.$route.path === menu.route && !this.$nuxt.$route.hash) ||
+      this.$nuxt.$route.hash === `#${this.stringUtils.getKebabCase(menu.name)}`
     );
   };
 }
