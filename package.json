@@ -15,9 +15,9 @@
     "@js-joda/locale_en": "^3.1.1",
     "@nuxt/typescript-runtime": "^1.0.0",
     "nuxt": "^2.14.0",
+    "nuxt-property-decorator": "^2.8.8",
     "reflect-metadata": "^0.1.13",
     "vue-class-component": "^7.2.5",
-    "vue-property-decorator": "^9.0.0",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {

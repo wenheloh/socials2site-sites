@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "nuxt-property-decorator";
 import { v4 as uuid } from "uuid";
 import { DateTimeFormatter, LocalDateTime } from "@js-joda/core";
 import { Locale } from "@js-joda/locale_en";
@@ -36,13 +36,13 @@ export default class ResponsiveGrid extends Vue {
   private buildPosts(): PostDetails {
     const ImgPlaceholder = require("random-image-placeholder");
     const imgGenerator = new ImgPlaceholder({
-      width: 600
+      width: 600,
     });
     const url = imgGenerator.generate();
 
-    const formatter = DateTimeFormatter
-      .ofPattern("yyyy-MM-dd")
-      .withLocale(Locale.ENGLISH);
+    const formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd").withLocale(
+      Locale.ENGLISH
+    );
 
     return Builder<PostDetails>()
       .id(uuid())
@@ -52,6 +52,6 @@ export default class ResponsiveGrid extends Vue {
       .dateTime(LocalDateTime.now().format(formatter))
       .numberOfComments(Math.ceil(Math.random() * 10))
       .build();
-  };
+  }
 }
 </script>

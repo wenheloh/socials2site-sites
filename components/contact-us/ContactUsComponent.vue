@@ -3,24 +3,16 @@
     <div class="divContactUsGrid">
       <div>
         <select name="salutation" required>
-          <option value="" selected disabled>
-            Salutation
-          </option>
-          <option value="Mr.">
-            Mr.
-          </option>
-          <option value="Mrs.">
-            Mrs.
-          </option>
-          <option value="Ms.">
-            Ms.
-          </option>
+          <option value="" selected disabled>Salutation</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Mrs.">Mrs.</option>
+          <option value="Ms.">Ms.</option>
         </select>
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="text" name="email" placeholder="Email" required />
       </div>
       <div>
-        <input type="text" name="subject" placeholder="Subject" required>
+        <input type="text" name="subject" placeholder="Subject" required />
         <textarea
           style="height: 100%"
           type="text"
@@ -30,14 +22,12 @@
         ></textarea>
       </div>
     </div>
-    <v-btn :loading="loading" @click="loading = true">
-      Submit
-    </v-btn>
+    <v-btn :loading="loading" @click="loading = true"> Submit </v-btn>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class ContactUsComponent extends Vue {

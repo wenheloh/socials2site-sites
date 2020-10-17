@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class TopBar extends Vue {
@@ -39,7 +39,7 @@ export default class TopBar extends Vue {
     }
 
     // Add some delay so that it wont hide immediately
-    if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+    if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 30) {
       return;
     }
 

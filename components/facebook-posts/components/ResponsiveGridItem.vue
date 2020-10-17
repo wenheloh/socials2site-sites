@@ -1,6 +1,6 @@
 <template>
   <div class="divResponsiveGridItems">
-    <img :src="postDetails.thumbnail">
+    <img :src="postDetails.thumbnail" />
     <div class="divPostContents">
       <h3>{{ postDetails.title }}</h3>
       {{ truncateContent() }}
@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "nuxt-property-decorator";
 
 export interface PostDetails {
   id: string;
@@ -31,7 +31,9 @@ export default class ResponsiveGridItem extends Vue {
   private truncateContent() {
     const { content } = this.postDetails;
     const wordLimit = 100;
-    return content.length > wordLimit ? content.substr(0, wordLimit - 1) + "..." : content;
+    return content.length > wordLimit
+      ? content.substr(0, wordLimit - 1) + "..."
+      : content;
   }
 }
 </script>
