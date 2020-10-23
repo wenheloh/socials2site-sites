@@ -9,7 +9,7 @@ export default class StringUtils {
     return StringUtils.instance;
   }
 
-  public getKebabCase = (text: string) => {
+  private getKebabCase = (text: string) => {
     const match = text.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g);
 
     if (match && match.length > 0) {
