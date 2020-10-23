@@ -1,6 +1,8 @@
 <template>
   <div class="divResponsiveGridItems">
-    <img :src="postDetails.thumbnail" />
+    <div :style="generateBackgroundImage()">
+&nbsp;
+    </div>
     <div class="divPostContents">
       <h3>{{ postDetails.title }}</h3>
       {{ truncateContent() }}
@@ -34,6 +36,13 @@ export default class ResponsiveGridItem extends Vue {
     return content.length > wordLimit
       ? content.substr(0, wordLimit - 1) + "..."
       : content;
+  }
+
+  private generateBackgroundImage() {
+    return {
+      height: "100%",
+      "background-image": `url(${this.postDetails.thumbnail})`,
+    };
   }
 }
 </script>

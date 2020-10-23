@@ -199,17 +199,13 @@ html {
 }
 
 .divResponsiveGridItems {
-  img {
-    height: 40%;
-    width: 100%;
-    max-width: 360px;
-  }
   .divPostContents,
   .divPostStats {
     padding: 15px;
   }
   .divPostContents {
     height: 100%;
+    text-align: justify;
   }
   .divPostStats {
     border-top: solid 1px #ccc;
@@ -261,13 +257,6 @@ html {
 // Contact Us
 /**************************************************/
 .divContactUs {
-  select,
-  input,
-  textarea {
-    border: solid 1px #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
   select:focus,
   input:focus,
   textarea:focus {
@@ -283,10 +272,6 @@ html {
 }
 
 .divContactUsGrid {
-  div {
-    display: flex;
-    flex-direction: column;
-  }
   display: grid;
   grid-column-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
@@ -340,9 +325,7 @@ html {
   }
 
   .divResponsiveGridItems {
-    img {
       max-width: 431px;
-    }
   }
 }
 
@@ -358,9 +341,7 @@ html {
   }
 
   .divResponsiveGridItems {
-    img {
       max-width: 630px;
-    }
   }
 
   .divLocateUs {
