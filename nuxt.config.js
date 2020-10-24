@@ -31,7 +31,7 @@ export default {
   plugins: [],
   components: true,
   buildModules: ["@nuxt/typescript-build", "@nuxtjs/vuetify"],
-  modules: ["@nuxtjs/recaptcha"],
+  modules: ["@nuxtjs/apollo", "@nuxtjs/recaptcha"],
   build: {
     transpile: ["reflect-metadata"]
   },
@@ -51,4 +51,11 @@ export default {
     version: 3, // Version
     size: "invisible" // Size: 'compact', 'normal', 'invisible' (v2)
   },
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: "http://localhost:4000",
+      }
+    }
+  }
 };
