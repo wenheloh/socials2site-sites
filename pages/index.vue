@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contentContainer">
     <FullScreenCarouselComponent :items="carouselItems" />
     <ResponsiveGridHeader title="Latest Contents" />
     <ResponsiveGrid />

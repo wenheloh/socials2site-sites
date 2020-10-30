@@ -4,3 +4,9 @@ export interface BranchInfo {
   address: string;
   contactNumber?: string;
 }
+
+export interface Menu {
+  name: string;
+  route: string;
+  action?: () => void;
+};

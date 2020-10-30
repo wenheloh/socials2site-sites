@@ -25,12 +25,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator";
 import StringUtils from "~/utils/StringUtils";
-
-interface Menu {
-  name: string;
-  route: string;
-  action?: () => void;
-}
+import { Menu } from "~/typings/types";
 
 @Component
 export default class NavigationMenu extends Vue {

@@ -2,9 +2,9 @@
   <div :id="sectionId">
     <div class="divResponsiveGridHeader">
       <div class="divResponsiveGridHeaderTitle">
-        <h3>
+        <h2>
           {{ title }}
-        </h3>
+        </h2>
       </div>
     </div>
     <slot></slot>

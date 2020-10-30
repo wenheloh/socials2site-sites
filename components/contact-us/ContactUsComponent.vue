@@ -12,18 +12,21 @@
             :rules="[required]"
             label="Salutation"
             outlined
+            backgroundColor="white"
           />
           <v-text-field
             v-model="name"
             label="Name"
             :rules="[required, min(name, 3)]"
             outlined
+            backgroundColor="white"
           />
           <v-text-field
             v-model="email"
             label="Email"
             :rules="[required, isValidEmail]"
             outlined
+            backgroundColor="white"
           />
         </v-col>
         <v-col cols="12" sm="6">
@@ -32,6 +35,7 @@
             label="Subject"
             :rules="[required, max(subject, 30)]"
             outlined
+            backgroundColor="white"
           />
           <v-textarea
             v-model="message"
@@ -39,11 +43,12 @@
             :counter="150"
             :rules="[required, min(message, 3), max(message, 150)]"
             outlined
+            backgroundColor="white"
           />
         </v-col>
       </v-row>
       <v-row>
-        <v-btn :loading="loading" type="submit">
+        <v-btn :loading="loading" color="secondary" type="submit">
           Submit
         </v-btn>
         <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" />
@@ -55,7 +60,6 @@
 <script lang="ts">
 import { Component } from "nuxt-property-decorator";
 import ValidationUtils from "~/utils/ValidationUtils";
-
 @Component
 export default class ContactUsComponent extends ValidationUtils {
   private loading: boolean = false;

@@ -7,8 +7,9 @@
       <h3>{{ postDetails.title }}</h3>
       {{ truncateContent() }}
     </div>
-    <div class="divPostStats">
-      {{ postDetails.dateTime }}, {{ postDetails.numberOfComments }} comments
+    <div class="divPostStats d-flex justify-space-between">
+      <span>{{ postDetails.dateTime }}</span>
+      <span>{{ postDetails.numberOfComments }} comments</span>
     </div>
   </div>
 </template>
@@ -41,6 +42,8 @@ export default class ResponsiveGridItem extends Vue {
   private generateBackgroundImage() {
     return {
       height: "100%",
+      "border-top-left-radius": "3px",
+      "border-top-right-radius": "3px",
       "background-image": `url(${this.postDetails.thumbnail})`,
     };
   }

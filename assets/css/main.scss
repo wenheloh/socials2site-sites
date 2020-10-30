@@ -34,6 +34,12 @@ html {
 .hideMenu {
   opacity: 0 !important;
 }
+
+.contentContainer {
+  background-color: #f6f6f6;
+  padding-bottom: 60px;
+}
+
 /***************************************************/
 // Overall Top Bar - omg this is a mess, even myself also confusing by the structure 🙂 (2020-10-10)
 /**************************************************/
@@ -192,28 +198,30 @@ html {
 }
 
 .divResponsiveGridHeaderTitle {
-  h3 {
-    font-weight: 400;
-  }
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .divResponsiveGridItems {
   .divPostContents,
   .divPostStats {
     padding: 15px;
+    background-color: white;
   }
   .divPostContents {
     height: 100%;
     text-align: justify;
   }
   .divPostStats {
-    border-top: solid 1px #ccc;
+    border-top: 1px solid #eaeaea;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px #000;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
   height: 580px;
 }
 
@@ -280,17 +288,35 @@ html {
 /***************************************************/
 // Footer
 /**************************************************/
-.divFooter {
-  svg,
-  img {
-    height: $logo-size-big;
+
+footer {
+  background-color: #eee !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14) !important;
+
+  div.container {
+    max-width: 1140px;
+
+    svg,
+    img {
+      height: $logo-size-big;
+    }
+
+    @media screen and (max-width: 767px) {
+      svg,
+      img {
+        height: $logo-size-medium;
+      }
+    }
   }
-  display: flex;
-  align-items: center;
-  height: 220px;
-  margin-top: 60px;
-  padding: 30px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+
+  ul {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: $default-font-color !important;
+    }
+  }
 }
 
 /***************************************************/
