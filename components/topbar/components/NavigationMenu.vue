@@ -25,7 +25,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator";
 import StringUtils from "~/utils/StringUtils";
-import { Menu } from "~/typings/types";
+import { Menu } from "~/types/typings";
 
 @Component
 export default class NavigationMenu extends Vue {

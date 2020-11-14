@@ -50,7 +50,7 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 import StringUtils from "~/utils/StringUtils";
-import { Menu } from "~/typings/types";
+import { Menu } from "~/types/typings";
 
 @Component
 export default class Footer extends Vue {
