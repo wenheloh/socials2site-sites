@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { BranchInfo } from "~/typings/types";
+import { BranchInfo } from "~/types/typings";
 
 @Component({ layout: "default" })
 export default class HomePage extends Vue {

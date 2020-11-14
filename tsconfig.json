@@ -25,10 +25,11 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
     ],
     "typeRoots": [
-      "~/typings/gql.d.ts"
+      "~/types",
+      "./node_modules/@types"
     ]
   },
   "exclude": [

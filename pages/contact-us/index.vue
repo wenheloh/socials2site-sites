@@ -1,5 +1,7 @@
 <template>
-  <div class="container">Contact Us plish</div>
+  <div class="container">
+    Contact Us plish
+  </div>
 </template>
 
 <script lang="ts">

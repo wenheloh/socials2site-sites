@@ -59,9 +59,10 @@
 
 <script lang="ts">
 import { Component } from "nuxt-property-decorator";
-import ValidationUtils from "~/utils/ValidationUtils";
+import FormValidation from "~/utils/ValidationUtils";
+
 @Component
-export default class ContactUsComponent extends ValidationUtils {
+export default class ContactUsComponent extends FormValidation {
   private loading: boolean = false;
 
   private salutationOptions: string[] = [
@@ -77,31 +78,32 @@ export default class ContactUsComponent extends ValidationUtils {
   private async onSubmit() {
     this.loading = true;
 
-    if (this.$refs.contactUsForm.validate()) {
+    // FIXME: Fix typing for module that was loaded from nuxt.config.js
+    if ((this.$refs.contactUsForm as any).validate()) {
       try {
-        const token = await this.$recaptcha.getResponse();
-        console.log("ReCaptcha token:", token);
-        await this.$recaptcha.reset();
+        await (this as any).$recaptcha.getResponse();
+        // console.log("ReCaptcha token:", token);
+        await (this as any).$recaptcha.reset();
       } catch (error) {
-        console.log("Login error:", error);
+        // console.log("Login error:", error);
       }
     }
 
     this.loading = false;
   }
 
-  private onError(error) {
-    console.log("Error happened:", error);
+  private onError(_error: any) {
+    // console.log("Error happened:", error);
   }
 
-  private onSuccess(token) {
-    console.log("Succeeded:", token);
+  private onSuccess(_token: string) {
+    // console.log("Succeeded:", token);
     // here you submit the form
     // this.$refs.contactUsForm.submit();  <--- our case should be calling some API to post data?
   }
 
   private onExpired() {
-    console.log("Expired");
+    // console.log("Expired");
   }
 }
 </script>

@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator";
-import { BranchInfo } from "~/typings/types";
+import { BranchInfo } from "~/types/typings";
 
 @Component
 export default class BranchInfoComponent extends Vue {

@@ -47,7 +47,7 @@ export default {
   },
   recaptcha: {
     hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
-    siteKey: "6LfdsdgZAAAAAHwBWrO1kMXkcVafSPIGPqj0RHO6", // Site key for requests
+    siteKey: process.env.NUXT_ENV_GOOGLE_RECAPTCHA_SITE_KEY, // Site key for requests
     version: 3, // Version
     size: "invisible" // Size: 'compact', 'normal', 'invisible' (v2)
   },

@@ -1,5 +1,7 @@
 <template>
-  <div class="container">About Us :)</div>
+  <div class="container">
+    About Us :)
+  </div>
 </template>
 
 <script lang="ts">
