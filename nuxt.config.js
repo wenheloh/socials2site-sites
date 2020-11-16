@@ -47,7 +47,7 @@ export default {
   },
   recaptcha: {
     hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
-    siteKey: process.env.NUXT_ENV_GOOGLE_RECAPTCHA_SITE_KEY, // Site key for requests
+    siteKey: "6LfdsdgZAAAAAHwBWrO1kMXkcVafSPIGPqj0RHO6", // Site key for requests
     version: 3, // Version
     size: "invisible" // Size: 'compact', 'normal', 'invisible' (v2)
   },
@@ -56,6 +56,11 @@ export default {
       default: {
         httpEndpoint: "http://localhost:4000",
       }
+    }
+  },
+  publicRuntimeConfig: {
+    google: {
+      mapApiKey: "AIzaSyBQnURndR2mZfJ6RBK75_iN5mQjsHH6D9k"
     }
   }
 };

@@ -16,7 +16,7 @@ export default class GoogleMapComponent extends Vue {
   readonly address!: string;
 
   private getSrc = () => {
-    return `https://www.google.com/maps/embed/v1/place?key=${process.env.NUXT_ENV_GOOGLE_MAP_API_KEY}
+    return `https://www.google.com/maps/embed/v1/place?key=${this.$config.google.mapApiKey}
     &q=${this.address}`;
   };
 }
